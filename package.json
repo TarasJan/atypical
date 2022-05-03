@@ -1,0 +1,19 @@
+{
+  "name": "atypical",
+  "version": "0.0.1",
+  "description": "typical inspired text animation library",
+  "main": "atypical.js",
+  "scripts": {
+    "test": "node -r esm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TarasJan/atypical.git"
+  },
+  "author": "Jan Taras",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TarasJan/atypical/issues"
+  },
+  "homepage": "https://github.com/TarasJan/atypical#readme"
+}
