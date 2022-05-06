@@ -17,14 +17,14 @@ export function* generateFrames(originalText) {
   for (let i = 0; i < 8*originalText.length; i++) {
     if(current === originalText) break;
 
-    let diffIndex = getRandomDiffIndex(original, current)
+    let diffIndex = getRandomDiffIndex(originalText, current)
     let character = (i % 7 === 0) ? originalText[diffIndex] : randomChar().next().value 
-    yield current = mutate(originalText, character, diffIndex)
+    yield current = mutate(current, character, diffIndex)
   }
 }
 
 function mutate(current, character, index) {
-  return current.substring(0, diffIndex) + character + current.substring(diffIndex + 1);
+  return current.substring(0, index) + character + current.substring(index + 1);
 }
 
 function randomWord(length) {
