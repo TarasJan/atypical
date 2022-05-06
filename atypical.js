@@ -1,41 +1,30 @@
 export async function atypical(node, speed = 1) {
   const originalText = node.textContent
 
-
   for (let frame of generateFrames(originalText)) {
     requestAnimationFrame(() => node.textContent = frame);
     await wait(speed + speed * (Math.random() - 0.5));
   }
 }
 
-
 async function wait(ms) {
     await new Promise(resolve => setTimeout(resolve, ms));
 }
 
-
 export function* generateFrames(originalText) {
   let current = randomWord(originalText.length)
 
-  for (let i= 0; i < 100000; i++) {
+  for (let i = 0; i < 8*originalText.length; i++) {
     if(current === originalText) break;
-    if (i % 7 === 0) {
-      const randomIndex = Math.floor(Math.random() * originalText.length);
-      yield current = current.substring(0, randomIndex) + originalText[randomIndex] + current.substring(randomIndex + 1);
-    } else {
-      yield current = mutate(originalText, current)
-    }
+
+    let diffIndex = getRandomDiffIndex(original, current)
+    let character = (i % 7 === 0) ? originalText[diffIndex] : randomChar().next().value 
+    yield current = mutate(originalText, character, diffIndex)
   }
 }
 
-function mutate(original, current) {
-  let randomIndex = Math.floor(Math.random() * original.length)
-
-  if (original[randomIndex] !== current[randomIndex]) {
-    current = current.substring(0, randomIndex) + randomChar().next().value + current.substring(randomIndex + 1);
-  }
-
-  return current
+function mutate(current, character, index) {
+  return current.substring(0, diffIndex) + character + current.substring(diffIndex + 1);
 }
 
 function randomWord(length) {
@@ -46,6 +35,13 @@ export function* randomChar() {
   const alphabet = "@!#$%^&*();£+"
 
   yield alphabet[Math.floor(Math.random() * alphabet.length)]
+}
+
+function getRandomDiffIndex(w1, w2) {
+  const wa2 = w2.split("")
+  const differences = w1.split("").map((c, i) => Math.abs(c.charCodeAt() - wa2[i].charCodeAt()))
+  const max = Math.max(...differences)
+  return differences.indexOf(max)
 }
 
 // atypical(document.getElementById("target"), 7)
