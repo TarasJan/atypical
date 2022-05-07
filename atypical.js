@@ -34,7 +34,8 @@ function randomWord(length, charGenerator) {
 
 const alphabets = {
   noise: "@!#$%^&*();£+",
-  flips: " ▮▮▮"
+  flips: " ▮▮▮",
+  creepy: "q̶͙͍͇͍͇͈̼͓̇̏w̸̧̹̦̫̙̺͉̥͋̉ͅĕ̷̙͖͈̔̂̈́͑̚ͅr̵̢̳̰͚̻̰͑͛̃̑͗͋̚͜͝͠ţ̵̡̛͕̼̮̜̜̙̣͙̠͉̙̈́̆̾̈́̄̽͛̅̐̌̔͗ͅͅy̵̢̖̦̹͔͇̐͒̈́͋͘̕͝u̴͈͓̞̲̠̳̯͓̭̗͓̒̈́̍̕͠ì̸͎̻͎̭͓͎̲͖̈́͐̅͐̐̾̀̆͐̂̊̊̕͜ǒ̸̥͔̘̰͉̙̘̖̥̗̰̲͔̃̑͐͗̈͒̈́̔͘͜p̷̡̞̙̼̠̦̆̅̚l̷̡̧̫̗͕̥̱͍̜͓̀͆̀̀͛̆̐̽̈́͜͜k̵̭͚͝j̵̧̨̻̟̲̰̜̥̺̓͊̐̅̑̽̏́̍͜ͅh̸̦̹̻͖͒ͅğ̴̣͚͉͔́͊̍̈́̓͐͊̀̚͠f̴̨̧̧̹̦̟̰̤̖̞͈̰͓̣̺͐̚͘ḍ̷̡͍̩̭̼̭̺̤͙̥̜̱͇͑̎͐̄̋̒̽̏̉́̎̋͗͘ͅs̴̢̛̩͌̈́̀́̒͛a̸͎̻̞̹̙̎̎m̷̨͔̺̹͔͎̳̦̖̰̘͚͑́͌͂͠͝n̶̡̧͚̮̪̼̦̤̭̖̣̪̮̺̥̈̐͑̂̔̈́̍̐̍̎͠b̴͙̱̣͖͈͔̲͙̜͈̀́̌̈́v̷͉̰̙̼̱͓͖̰̭͕̹̻̮̿͜ç̷͓̳͓̘̿̅̆̅͌̆̆͘ͅx̶̛̺̪͒̀͋̄̿̈́̌̿̓ͅz̷͕͙̪̯͌̔̅͠"
 }
 
 export function* randomChar(alphabet) {
@@ -47,7 +48,5 @@ function getRandomDiffIndex(w1, w2) {
   const max = Math.max(...differences)
   return differences.indexOf(max)
 }
-
-// atypical(document.getElementById("target"), 7)
 
 
