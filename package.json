@@ -1,6 +1,6 @@
 {
   "name": "@jantaras29/atypical",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "typical inspired text animation library",
   "main": "atypical.js",
   "scripts": {
