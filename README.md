@@ -3,7 +3,7 @@ Small JS library with fancy text animation - this is obviously inspired by anoth
 
 The atypical function provides a slightly different visual effect of text emerging out of a blur of characters
 
-![alt demo](https://github.com/TarasJan29/atypical/blob/master/Demo.gif?raw=true)
+![alt demo](https://github.com/TarasJan/atypical/blob/master/Demo.gif?raw=true)
 
 
 You can try the codepen demo [here](https://codepen.io/TarasJan/pen/Jjpoxzd)
